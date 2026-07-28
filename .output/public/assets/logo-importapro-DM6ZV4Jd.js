@@ -1,0 +1,1 @@
+var e=`/assets/logo-importapro--UisK66x.png`;export{e as t};

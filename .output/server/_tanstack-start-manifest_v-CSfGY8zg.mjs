@@ -1,0 +1,179 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CSfGY8zg.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "E:/lovable/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/a-propos",
+			"/bienvenue",
+			"/calcul",
+			"/design-system",
+			"/historique",
+			"/home",
+			"/notifications",
+			"/parametres",
+			"/prix",
+			"/profil"
+		],
+		preloads: [
+			"/assets/index-Df0GF79A.js",
+			"/assets/rolldown-runtime-Bh1tDfsg.js",
+			"/assets/jsx-runtime-b5sFKGao.js"
+		],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-Df0GF79A.js"
+		} }]
+	},
+	"/": {
+		filePath: "E:/lovable/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-CiRLyJ6A.js",
+			"/assets/package-CIcK8Y_K.js",
+			"/assets/session-BCXNGI6L.js"
+		]
+	},
+	"/a-propos": {
+		filePath: "E:/lovable/src/routes/a-propos.tsx",
+		children: void 0,
+		preloads: ["/assets/a-propos-BCWR7G0M.js", "/assets/app-shell-CvchQWWR.js"]
+	},
+	"/bienvenue": {
+		filePath: "E:/lovable/src/routes/bienvenue.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/bienvenue-DB0BfP23.js",
+			"/assets/arrow-right-ByJCZFZk.js",
+			"/assets/user-Cgc0Sf_A.js",
+			"/assets/input-D2ohqCsQ.js",
+			"/assets/session-BCXNGI6L.js",
+			"/assets/logo-importapro-DM6ZV4Jd.js"
+		]
+	},
+	"/calcul": {
+		filePath: "E:/lovable/src/routes/calcul.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/calcul-CNeyS-n6.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/arrow-right-ByJCZFZk.js",
+			"/assets/check-DYks7DnC.js",
+			"/assets/coins-CiMLoDpM.js",
+			"/assets/package-CIcK8Y_K.js",
+			"/assets/sparkles-nrZLwyrb.js",
+			"/assets/trending-up-B0gDkXJ4.js",
+			"/assets/truck-BMaprXGU.js",
+			"/assets/utils-BtRqtsxU.js",
+			"/assets/input-D2ohqCsQ.js",
+			"/assets/animated-counter-C-lFuwtb.js",
+			"/assets/history-BHFLFK-Z.js",
+			"/assets/settings-DCd6_Lqs.js"
+		]
+	},
+	"/design-system": {
+		filePath: "E:/lovable/src/routes/design-system.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/design-system-C0XuoC69.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/bell-CjmKyQOx.js",
+			"/assets/file-text-DeFQgoPx.js",
+			"/assets/check-DYks7DnC.js",
+			"/assets/settings-DkYVAhOG.js",
+			"/assets/coins-CiMLoDpM.js",
+			"/assets/package-CIcK8Y_K.js",
+			"/assets/x-Bxr7-YCN.js",
+			"/assets/trending-up-B0gDkXJ4.js",
+			"/assets/user-Cgc0Sf_A.js"
+		]
+	},
+	"/historique": {
+		filePath: "E:/lovable/src/routes/historique.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/historique-Bas-h8nQ.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/x-Bxr7-YCN.js",
+			"/assets/utils-BtRqtsxU.js",
+			"/assets/input-D2ohqCsQ.js",
+			"/assets/history-BHFLFK-Z.js",
+			"/assets/dist-D_KC8EKF.js"
+		]
+	},
+	"/home": {
+		filePath: "E:/lovable/src/routes/home.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/home-WYVQO4jy.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/arrow-right-ByJCZFZk.js",
+			"/assets/bell-CjmKyQOx.js",
+			"/assets/file-text-DeFQgoPx.js",
+			"/assets/settings-DkYVAhOG.js",
+			"/assets/package-CIcK8Y_K.js",
+			"/assets/sparkles-nrZLwyrb.js",
+			"/assets/trending-up-B0gDkXJ4.js",
+			"/assets/truck-BMaprXGU.js",
+			"/assets/session-BCXNGI6L.js",
+			"/assets/logo-importapro-DM6ZV4Jd.js",
+			"/assets/animated-counter-C-lFuwtb.js",
+			"/assets/history-BHFLFK-Z.js"
+		]
+	},
+	"/notifications": {
+		filePath: "E:/lovable/src/routes/notifications.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/notifications-DjabG0DE.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/coins-CiMLoDpM.js",
+			"/assets/trending-up-B0gDkXJ4.js"
+		]
+	},
+	"/parametres": {
+		filePath: "E:/lovable/src/routes/parametres.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/parametres-w7Hgx8t_.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/check-DYks7DnC.js",
+			"/assets/coins-CiMLoDpM.js",
+			"/assets/log-out-BgSc8bGV.js",
+			"/assets/sparkles-nrZLwyrb.js",
+			"/assets/trending-up-B0gDkXJ4.js",
+			"/assets/truck-BMaprXGU.js",
+			"/assets/utils-BtRqtsxU.js",
+			"/assets/input-D2ohqCsQ.js",
+			"/assets/session-BCXNGI6L.js",
+			"/assets/settings-DCd6_Lqs.js",
+			"/assets/dist-D_KC8EKF.js"
+		]
+	},
+	"/prix": {
+		filePath: "E:/lovable/src/routes/prix.tsx",
+		children: void 0,
+		preloads: ["/assets/prix-MpAKJmJV.js", "/assets/app-shell-CvchQWWR.js"]
+	},
+	"/profil": {
+		filePath: "E:/lovable/src/routes/profil.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/profil-CVjfSj_Y.js",
+			"/assets/app-shell-CvchQWWR.js",
+			"/assets/createLucideIcon-FgEgsm5E.js",
+			"/assets/bell-CjmKyQOx.js",
+			"/assets/log-out-BgSc8bGV.js",
+			"/assets/sparkles-nrZLwyrb.js",
+			"/assets/user-Cgc0Sf_A.js",
+			"/assets/session-BCXNGI6L.js"
+		]
+	}
+} });
+//#endregion
+export { tsrStartManifest };

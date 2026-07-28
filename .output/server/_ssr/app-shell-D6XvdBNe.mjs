@@ -1,0 +1,106 @@
+import { t as cn } from "./utils-C_uf36nf.mjs";
+import { g as Link, l as useRouterState } from "../_libs/@tanstack/react-router+[...].mjs";
+import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
+import { O as House, _ as Plus, f as Settings, k as History, n as User, z as ChevronLeft } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/app-shell-D6XvdBNe.js
+var import_jsx_runtime = require_jsx_runtime();
+function AppShell({ title, showBack, backTo = "/home", action, children, hideBottomNav }) {
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "mx-auto flex min-h-[100dvh] w-full max-w-[480px] flex-col overflow-x-clip bg-background text-foreground",
+		children: [
+			title && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
+				className: "sticky top-0 z-30 flex items-center gap-3 border-b border-border/60 bg-background/70 px-5 py-4 backdrop-blur-2xl",
+				style: { paddingTop: "max(1rem, env(safe-area-inset-top))" },
+				children: [
+					showBack ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: backTo,
+						"aria-label": "Retour",
+						className: "-ml-2 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-card text-foreground transition-all hover:bg-card/80 active:scale-90",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronLeft, { className: "h-5 w-5" })
+					}) : null,
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+						className: "min-w-0 flex-1 truncate text-display text-lg font-semibold",
+						children: title
+					}),
+					action ?? null
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: cn("animate-page-enter flex-1 px-5 pt-5", hideBottomNav ? "pb-8" : "pb-[calc(7rem+env(safe-area-inset-bottom))]"),
+				children
+			}, pathname),
+			!hideBottomNav && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BottomNav, {})
+		]
+	});
+}
+var sideItems = [{
+	to: "/home",
+	label: "Accueil",
+	icon: House
+}, {
+	to: "/historique",
+	label: "Historique",
+	icon: History
+}];
+var sideItemsRight = [{
+	to: "/parametres",
+	label: "Réglages",
+	icon: Settings
+}, {
+	to: "/profil",
+	label: "Profil",
+	icon: User
+}];
+function BottomNav() {
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", {
+		className: "fixed inset-x-0 bottom-0 z-30 mx-auto w-full max-w-[480px] px-3",
+		style: { paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" },
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "relative flex h-[68px] items-center justify-between rounded-[32px] border border-border-strong bg-card/85 px-5 shadow-[var(--shadow-elevated)] backdrop-blur-2xl",
+			children: [
+				sideItems.map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(NavItem, {
+					...i,
+					active: pathname === i.to
+				}, i.to)),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					to: "/calcul",
+					search: { id: void 0 },
+					"aria-label": "Nouveau calcul",
+					className: "absolute left-1/2 -top-7 -translate-x-1/2",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pointer-events-none absolute -inset-2 rounded-full bg-primary-glow/25 blur-xl" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: cn("relative grid h-16 w-16 place-items-center rounded-full gradient-primary text-primary-foreground", "border-4 border-background shadow-[0_10px_30px_-8px_color-mix(in_oklab,var(--primary)_70%,transparent)]", "transition-transform active:scale-95", pathname === "/calcul" && "animate-pulse-glow"),
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, {
+							className: "h-7 w-7",
+							strokeWidth: 2.5
+						})
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "w-14 shrink-0",
+					"aria-hidden": true
+				}),
+				sideItemsRight.map((i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(NavItem, {
+					...i,
+					active: pathname === i.to
+				}, i.to))
+			]
+		})
+	});
+}
+function NavItem({ to, label, icon: Icon, active }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+		to,
+		className: cn("flex min-w-0 flex-col items-center gap-1 rounded-2xl px-2 py-1 text-[10px] font-semibold transition-colors", active ? "text-primary" : "text-muted-foreground hover:text-foreground"),
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+			className: "h-[22px] w-[22px]",
+			strokeWidth: active ? 2.4 : 1.75
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+			className: "truncate",
+			children: label
+		})]
+	});
+}
+//#endregion
+export { AppShell as t };

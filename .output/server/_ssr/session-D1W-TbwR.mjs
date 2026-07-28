@@ -1,0 +1,52 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/session-D1W-TbwR.js
+var KEY = "importapro:session:v1";
+var EVT = "importapro:session:changed";
+function slugify(s) {
+	return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "").slice(0, 20) || "user";
+}
+function randomId(len = 6) {
+	const chars = "abcdefghjkmnpqrstuvwxyz23456789";
+	let out = "";
+	const arr = new Uint32Array(len);
+	if (typeof crypto !== "undefined") crypto.getRandomValues(arr);
+	for (let i = 0; i < len; i++) out += chars[arr[i] % 31];
+	return out;
+}
+function getSession() {
+	if (typeof window === "undefined") return null;
+	try {
+		const raw = window.localStorage.getItem(KEY);
+		if (!raw) return null;
+		return JSON.parse(raw);
+	} catch {
+		return null;
+	}
+}
+function createSession(name) {
+	const trimmed = name.trim();
+	const session = {
+		name: trimmed,
+		uid: `${slugify(trimmed)}-${randomId()}`,
+		createdAt: Date.now()
+	};
+	window.localStorage.setItem(KEY, JSON.stringify(session));
+	window.dispatchEvent(new CustomEvent(EVT));
+	return session;
+}
+function clearSession() {
+	if (typeof window === "undefined") return;
+	window.localStorage.removeItem(KEY);
+	window.dispatchEvent(new CustomEvent(EVT));
+}
+function onSessionChange(cb) {
+	if (typeof window === "undefined") return () => {};
+	const h = () => cb();
+	window.addEventListener(EVT, h);
+	window.addEventListener("storage", h);
+	return () => {
+		window.removeEventListener(EVT, h);
+		window.removeEventListener("storage", h);
+	};
+}
+//#endregion
+export { onSessionChange as i, createSession as n, getSession as r, clearSession as t };

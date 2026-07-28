@@ -1,0 +1,117 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/history-CmpTOKK3.js
+var KEY = "importapro:history:v1";
+var EVT = "importapro:history:changed";
+var COUNTER_KEY = "importapro:history:counter:v1";
+function formatRef(n) {
+	return `IP-${String(n).padStart(4, "0")}`;
+}
+function readCounter() {
+	if (typeof window === "undefined") return 0;
+	const raw = window.localStorage.getItem(COUNTER_KEY);
+	return raw ? parseInt(raw, 10) || 0 : 0;
+}
+function nextRef() {
+	if (typeof window === "undefined") return formatRef(1);
+	const next = readCounter() + 1;
+	window.localStorage.setItem(COUNTER_KEY, String(next));
+	return formatRef(next);
+}
+function read() {
+	if (typeof window === "undefined") return [];
+	try {
+		const raw = window.localStorage.getItem(KEY);
+		if (!raw) return [];
+		const parsed = JSON.parse(raw);
+		return Array.isArray(parsed) ? parsed : [];
+	} catch {
+		return [];
+	}
+}
+function write(records) {
+	if (typeof window === "undefined") return;
+	window.localStorage.setItem(KEY, JSON.stringify(records));
+	window.dispatchEvent(new CustomEvent(EVT));
+}
+function backfillRefs(records) {
+	const missing = records.filter((r) => !r.ref);
+	if (missing.length === 0) return records;
+	missing.sort((a, b) => a.createdAt - b.createdAt);
+	for (const r of missing) r.ref = nextRef();
+	write(records);
+	return records;
+}
+function listHistory() {
+	return [...backfillRefs(read())].sort((a, b) => b.updatedAt - a.updatedAt);
+}
+function getRecord(id) {
+	return backfillRefs(read()).find((r) => r.id === id);
+}
+function upsertRecord(rec) {
+	const all = read();
+	const idx = all.findIndex((r) => r.id === rec.id);
+	if (idx >= 0) all[idx] = rec;
+	else all.push(rec);
+	write(all);
+}
+function deleteRecord(id) {
+	write(read().filter((r) => r.id !== id));
+}
+function onHistoryChange(cb) {
+	if (typeof window === "undefined") return () => {};
+	const handler = () => cb();
+	window.addEventListener(EVT, handler);
+	window.addEventListener("storage", handler);
+	return () => {
+		window.removeEventListener(EVT, handler);
+		window.removeEventListener("storage", handler);
+	};
+}
+function newId() {
+	return `c_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+}
+function formatAr(v) {
+	return `${Math.round(v).toLocaleString("fr-FR").replace(/\u202f/g, " ")} Ar`;
+}
+function formatDateTime(ts) {
+	const d = new Date(ts);
+	return {
+		date: d.toLocaleDateString("fr-FR", {
+			day: "2-digit",
+			month: "2-digit",
+			year: "numeric"
+		}),
+		time: d.toLocaleTimeString("fr-FR", {
+			hour: "2-digit",
+			minute: "2-digit"
+		})
+	};
+}
+function recordToText(r) {
+	const { date, time } = formatDateTime(r.createdAt);
+	const qte = r.quantite && r.quantite > 0 ? r.quantite : 1;
+	const poidsTotal = r.poidsG * qte;
+	const margeTotale = r.marge * qte;
+	const prixVenteUnitaire = qte > 0 ? r.prixVente / qte : r.prixVente;
+	return [
+		`ImportaPro ${r.ref ?? ""} — ${r.nom?.trim() || "Calcul"} du ${date} à ${time}`,
+		``,
+		`Quantité       : ${qte}`,
+		`Prix Yuan/u    : ${r.prixYuan} ¥`,
+		`Taux           : ${r.taux} Ar/¥`,
+		`Tarif/kg       : ${formatAr(r.tarifKg)}`,
+		`Poids unitaire : ${r.poidsG} g`,
+		`Poids total    : ${poidsTotal} g`,
+		``,
+		`Transport      : ${formatAr(r.transport)}`,
+		`Produit total  : ${formatAr(r.produit)}`,
+		`Sous-total     : ${formatAr(r.sousTotal)}`,
+		`Frais (15%)    : ${formatAr(r.frais)}`,
+		`Coût Tana      : ${formatAr(r.coutTana)}`,
+		`Marge unitaire : ${formatAr(r.marge)}`,
+		`Marge totale   : ${formatAr(margeTotale)}`,
+		`Vente unitaire : ${formatAr(prixVenteUnitaire)}`,
+		`Vente totale   : ${formatAr(r.prixVente)}`
+	].join("\n");
+}
+//#endregion
+export { listHistory as a, onHistoryChange as c, getRecord as i, recordToText as l, formatAr as n, newId as o, formatDateTime as r, nextRef as s, deleteRecord as t, upsertRecord as u };

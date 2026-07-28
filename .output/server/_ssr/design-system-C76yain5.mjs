@@ -1,0 +1,861 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
+import { B as ChevronDown, C as LoaderCircle, L as CircleAlert, O as House, P as Coins, U as Calculator, V as Check, W as Bell, _ as Plus, a as TrendingUp, b as Package, f as Settings, j as FileText, k as History, m as Scale, n as User, p as Search, t as X, z as ChevronLeft } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/design-system-C76yain5.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+function Section({ id, title, children }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "space-y-6",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex items-baseline gap-3",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "font-display text-xs font-semibold tracking-widest text-primary",
+				children: id
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+				className: "text-2xl font-bold text-foreground",
+				children: title
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "surface-card p-6 md:p-8",
+			children
+		})]
+	});
+}
+function Swatch({ hex, name, value, light }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "space-y-3",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "aspect-square rounded-2xl border border-border",
+			style: { backgroundColor: hex }
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			className: `font-display text-sm font-semibold ${light ? "text-foreground" : "text-foreground"}`,
+			children: value
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			className: "text-xs text-muted-foreground",
+			children: name
+		})] })]
+	});
+}
+function DesignSystem() {
+	const [margin, setMargin] = (0, import_react.useState)("30000");
+	const [checked, setChecked] = (0, import_react.useState)(true);
+	const [switchOn, setSwitchOn] = (0, import_react.useState)(true);
+	const [dropdownOpen, setDropdownOpen] = (0, import_react.useState)(false);
+	const [dialogOpen, setDialogOpen] = (0, import_react.useState)(false);
+	const [toastOpen, setToastOpen] = (0, import_react.useState)(false);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "min-h-screen bg-background",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
+			className: "border-b border-border",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mx-auto max-w-6xl px-6 py-10 md:py-16",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid h-12 w-12 place-items-center rounded-2xl gradient-primary shadow-glow",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Package, {
+							className: "h-6 w-6 text-primary-foreground",
+							strokeWidth: 2.4
+						})
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-display text-xs font-semibold tracking-[0.2em] text-muted-foreground",
+						children: "DESIGN SYSTEM"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+						className: "text-display text-3xl md:text-4xl",
+						children: "ImportaPro"
+					})] })]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground",
+					children: "Système de design premium et minimaliste pour le calculateur d'importation intelligent. Pensé pour la clarté financière, la précision et le haut de gamme."
+				})]
+			})
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+			className: "mx-auto max-w-6xl space-y-16 px-6 py-16",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
+					id: "01",
+					title: "Palette de couleurs",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#0E1021",
+								name: "Background",
+								value: "#0E1021"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#1A1D2E",
+								name: "Card",
+								value: "#1A1D2E"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#DF0139",
+								name: "Rouge principal",
+								value: "#DF0139"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#FF2D55",
+								name: "Rouge secondaire",
+								value: "#FF2D55"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#F3F2FF",
+								name: "Blanc",
+								value: "#F3F2FF",
+								light: true
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Swatch, {
+								hex: "#A2A2A2",
+								name: "Gris",
+								value: "#A2A2A2"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "aspect-square rounded-2xl gradient-primary shadow-glow" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-sm font-semibold",
+									children: "Gradient"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "Primary → Glow"
+								})] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "aspect-square rounded-2xl bg-success/20 border border-success/40" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-sm font-semibold",
+									children: "Success"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "État positif"
+								})] })]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "aspect-square rounded-2xl bg-warning/20 border border-warning/40" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-sm font-semibold",
+									children: "Warning"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "Alerte"
+								})] })]
+							})
+						]
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "02",
+					title: "Typographie",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid gap-10 md:grid-cols-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs font-semibold uppercase tracking-widest text-primary",
+									children: "Poppins · Titres"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-7xl font-bold text-foreground",
+									children: "Aa"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-2",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-4xl font-bold",
+											children: "Display / Bold 700"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-2xl font-semibold",
+											children: "Heading / SemiBold 600"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-base font-medium text-muted-foreground",
+											children: "ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789"
+										})
+									]
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs font-semibold uppercase tracking-widest text-primary",
+									children: "Inter · Textes"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-7xl font-medium text-foreground",
+									style: { fontFamily: "Inter" },
+									children: "Aa"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-2",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-lg",
+											children: "Body Large / Regular 400"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-sm font-medium",
+											children: "Body Medium / Medium 500"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-sm text-muted-foreground",
+											children: "abcdefghijklmnopqrstuvwxyz 0123456789"
+										})
+									]
+								})
+							]
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "03",
+					title: "Boutons",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid gap-8 md:grid-cols-4",
+						children: [
+							{
+								label: "Primaire",
+								el: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "w-full rounded-2xl gradient-primary px-6 py-4 font-display text-sm font-semibold text-primary-foreground shadow-glow transition hover:brightness-110",
+									children: "Calculer"
+								})
+							},
+							{
+								label: "Secondaire",
+								el: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "w-full rounded-2xl bg-card-elevated border border-border-strong px-6 py-4 font-display text-sm font-semibold text-foreground transition hover:bg-muted",
+									children: "Annuler"
+								})
+							},
+							{
+								label: "Tertiaire",
+								el: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "w-full rounded-2xl border border-primary/60 bg-transparent px-6 py-4 font-display text-sm font-semibold text-primary transition hover:bg-primary/10",
+									children: "Voir plus"
+								})
+							},
+							{
+								label: "Désactivé",
+								el: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									disabled: true,
+									className: "w-full rounded-2xl bg-muted/60 px-6 py-4 font-display text-sm font-semibold text-muted-foreground/60 cursor-not-allowed",
+									children: "Indisponible"
+								})
+							}
+						].map((b) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "space-y-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-center text-xs font-medium text-muted-foreground",
+								children: b.label
+							}), b.el]
+						}, b.label))
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "04",
+					title: "Cards",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid gap-6 md:grid-cols-3",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "surface-card p-6",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-muted",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Package, { className: "h-5 w-5 text-foreground" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "font-display text-base font-semibold",
+										children: "Carte par défaut"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1 text-sm text-muted-foreground",
+										children: "Surface neutre pour contenu standard."
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "surface-card p-6 ring-1 ring-primary/40 shadow-glow",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "mb-4 grid h-11 w-11 place-items-center rounded-2xl gradient-primary",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Package, { className: "h-5 w-5 text-primary-foreground" })
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "font-display text-base font-semibold",
+										children: "Carte mise en avant"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1 text-sm text-muted-foreground",
+										children: "Bordure lumineuse pour les éléments clés."
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "surface-card p-6 bg-gradient-to-br from-primary/15 to-transparent ring-1 ring-primary/30",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs font-medium text-muted-foreground",
+										children: "Montant total"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-3 font-display text-3xl font-bold text-foreground",
+										children: "125 000 Ar"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1 text-xs text-primary",
+										children: "Prix de vente final"
+									})
+								]
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "05",
+					title: "Champs de saisie",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid gap-6 md:grid-cols-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-xs font-medium text-muted-foreground",
+									children: "Par défaut"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									placeholder: "Entrer une valeur",
+									className: "w-full rounded-2xl border border-border bg-input px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground/70 outline-none focus:border-primary"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-xs font-medium text-muted-foreground",
+									children: "Actif"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									defaultValue: "0,45",
+									className: "w-full rounded-2xl border border-primary bg-input px-4 py-3.5 text-sm text-foreground outline-none ring-2 ring-primary/30"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-xs font-medium text-muted-foreground",
+									children: "Rempli"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									defaultValue: "79,80",
+									className: "w-full rounded-2xl border border-border-strong bg-card-elevated px-4 py-3.5 text-sm font-medium text-foreground outline-none"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+									className: "text-xs font-medium text-muted-foreground/60",
+									children: "Désactivé"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+									disabled: true,
+									placeholder: "0,00",
+									className: "w-full rounded-2xl border border-border bg-muted/40 px-4 py-3.5 text-sm text-muted-foreground/40 cursor-not-allowed"
+								})]
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "06",
+					title: "Dropdown",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "max-w-sm space-y-2",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "text-xs font-medium text-muted-foreground",
+								children: "Devise"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+								onClick: () => setDropdownOpen((v) => !v),
+								className: "flex w-full items-center justify-between rounded-2xl border border-border bg-input px-4 py-3.5 text-sm text-foreground transition hover:border-border-strong",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Ar (Ariary)" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronDown, { className: `h-4 w-4 text-muted-foreground transition ${dropdownOpen ? "rotate-180" : ""}` })]
+							}),
+							dropdownOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "surface-elevated overflow-hidden p-2 shadow-elevated",
+								children: [
+									"Ar (Ariary)",
+									"EUR (Euro)",
+									"USD (Dollar)",
+									"CNY (Yuan)"
+								].map((opt, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									className: `flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-left text-sm transition hover:bg-muted ${i === 0 ? "text-primary" : "text-foreground"}`,
+									children: [opt, i === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-4 w-4" })]
+								}, opt))
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "07",
+					title: "Sélecteurs",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "grid gap-10 md:grid-cols-3",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs font-semibold uppercase tracking-widest text-primary",
+									children: "Radio"
+								}), [
+									"30 000 Ar",
+									"40 000 Ar",
+									"50 000 Ar",
+									"Personnalisée"
+								].map((opt) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+									className: "flex cursor-pointer items-center gap-3 rounded-2xl border border-border bg-card-elevated px-4 py-3 transition hover:border-border-strong",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `grid h-5 w-5 place-items-center rounded-full border-2 ${margin === opt ? "border-primary" : "border-muted-foreground/40"}`,
+											children: margin === opt && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-2.5 w-2.5 rounded-full bg-primary" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+											type: "radio",
+											name: "margin",
+											className: "hidden",
+											checked: margin === opt,
+											onChange: () => setMargin(opt)
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "text-sm text-foreground",
+											children: opt
+										})
+									]
+								}, opt))]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs font-semibold uppercase tracking-widest text-primary",
+										children: "Checkbox"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-4",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => setChecked((v) => !v),
+												className: `grid h-6 w-6 place-items-center rounded-lg border-2 transition ${checked ? "border-primary bg-primary" : "border-muted-foreground/40 bg-transparent"}`,
+												children: checked && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+													className: "h-4 w-4 text-primary-foreground",
+													strokeWidth: 3
+												})
+											}),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "grid h-6 w-6 place-items-center rounded-lg border-2 border-muted-foreground/40" }),
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "grid h-6 w-6 place-items-center rounded-lg border-2 border-muted-foreground/20 bg-muted/40" })
+										]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "text-xs text-muted-foreground",
+										children: "Actif · Inactif · Désactivé"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs font-semibold uppercase tracking-widest text-primary",
+									children: "Switch"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-6",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+										onClick: () => setSwitchOn((v) => !v),
+										className: `relative h-7 w-12 rounded-full transition ${switchOn ? "gradient-primary shadow-glow" : "bg-muted"}`,
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `absolute top-0.5 h-6 w-6 rounded-full bg-foreground shadow transition-all ${switchOn ? "left-[22px]" : "left-0.5"}` })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "relative h-7 w-12 rounded-full bg-muted",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "absolute left-0.5 top-0.5 h-6 w-6 rounded-full bg-foreground/80 shadow" })
+									})]
+								})]
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "08",
+					title: "Bottom Navigation",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mx-auto max-w-sm",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "surface-elevated p-2",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex items-center justify-around",
+								children: [
+									{
+										icon: House,
+										label: "Accueil",
+										active: true
+									},
+									{
+										icon: Calculator,
+										label: "Calcul"
+									},
+									{
+										icon: History,
+										label: "Historique"
+									},
+									{
+										icon: User,
+										label: "Profil"
+									}
+								].map(({ icon: Icon, label, active }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									className: `flex flex-col items-center gap-1 rounded-2xl px-4 py-3 transition ${active ? "text-primary" : "text-muted-foreground"}`,
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: `grid h-10 w-10 place-items-center rounded-2xl ${active ? "gradient-primary shadow-glow" : ""}`,
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: `h-5 w-5 ${active ? "text-primary-foreground" : ""}` })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-display text-[10px] font-semibold",
+										children: label
+									})]
+								}, label))
+							})
+						})
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "09",
+					title: "Top App Bar",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "surface-card flex items-center justify-between px-5 py-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "grid h-10 w-10 place-items-center rounded-2xl bg-muted",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronLeft, { className: "h-5 w-5 text-foreground" })
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-base font-semibold",
+									children: "Résultat du calcul"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "grid h-10 w-10 place-items-center rounded-2xl bg-muted",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Settings, { className: "h-5 w-5 text-foreground" })
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "surface-card flex items-center justify-between px-5 py-4",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-muted-foreground",
+								children: "Bonjour"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "font-display text-lg font-semibold",
+								children: "ImportaPro"
+							})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+									className: "grid h-10 w-10 place-items-center rounded-2xl bg-muted",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-5 w-5 text-foreground" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+									className: "relative grid h-10 w-10 place-items-center rounded-2xl bg-muted",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { className: "h-5 w-5 text-foreground" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "absolute right-2 top-2 h-2 w-2 rounded-full bg-primary" })]
+								})]
+							})]
+						})]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "10",
+					title: "Dialog",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-6",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => setDialogOpen(true),
+								className: "rounded-2xl gradient-primary px-6 py-3.5 font-display text-sm font-semibold text-primary-foreground shadow-glow",
+								children: "Ouvrir le dialog"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "rounded-3xl bg-background/80 p-8 ring-1 ring-border",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mx-auto max-w-sm surface-elevated p-6 shadow-elevated",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-primary/15",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "h-6 w-6 text-primary" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-lg font-semibold",
+											children: "Confirmer le calcul"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-1 text-sm text-muted-foreground",
+											children: "Voulez-vous enregistrer ce résultat dans l'historique ?"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "mt-6 flex gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												className: "flex-1 rounded-2xl bg-card-elevated border border-border-strong px-4 py-3 font-display text-sm font-semibold",
+												children: "Annuler"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												className: "flex-1 rounded-2xl gradient-primary px-4 py-3 font-display text-sm font-semibold text-primary-foreground shadow-glow",
+												children: "Confirmer"
+											})]
+										})
+									]
+								})
+							}),
+							dialogOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "fixed inset-0 z-50 grid place-items-center bg-background/70 backdrop-blur-sm p-6",
+								onClick: () => setDialogOpen(false),
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									onClick: (e) => e.stopPropagation(),
+									className: "w-full max-w-sm surface-elevated p-6 shadow-elevated",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-primary/15",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "h-6 w-6 text-primary" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-lg font-semibold",
+											children: "Confirmer le calcul"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-1 text-sm text-muted-foreground",
+											children: "Voulez-vous enregistrer ce résultat dans l'historique ?"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "mt-6 flex gap-3",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => setDialogOpen(false),
+												className: "flex-1 rounded-2xl bg-card-elevated border border-border-strong px-4 py-3 font-display text-sm font-semibold",
+												children: "Annuler"
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+												onClick: () => setDialogOpen(false),
+												className: "flex-1 rounded-2xl gradient-primary px-4 py-3 font-display text-sm font-semibold text-primary-foreground shadow-glow",
+												children: "Confirmer"
+											})]
+										})
+									]
+								})
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "11",
+					title: "Toast",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "space-y-4",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								onClick: () => {
+									setToastOpen(true);
+									setTimeout(() => setToastOpen(false), 2500);
+								},
+								className: "rounded-2xl border border-primary/60 bg-transparent px-6 py-3.5 font-display text-sm font-semibold text-primary",
+								children: "Déclencher"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "grid gap-3 md:grid-cols-3",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "surface-elevated flex items-center gap-3 px-4 py-3.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "grid h-8 w-8 place-items-center rounded-full bg-success/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+												className: "h-4 w-4 text-success",
+												strokeWidth: 3
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-sm font-semibold",
+											children: "Calcul enregistré"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-muted-foreground",
+											children: "Ajouté à l'historique"
+										})] })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "surface-elevated flex items-center gap-3 px-4 py-3.5 ring-1 ring-primary/30",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "grid h-8 w-8 place-items-center rounded-full bg-primary/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "h-4 w-4 text-primary" })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-sm font-semibold",
+											children: "Champ requis"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-muted-foreground",
+											children: "Le poids est obligatoire"
+										})] })]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "surface-elevated flex items-center gap-3 px-4 py-3.5",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "grid h-8 w-8 place-items-center rounded-full bg-warning/20",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "h-4 w-4 text-warning" })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "font-display text-sm font-semibold",
+											children: "Taux mis à jour"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "text-xs text-muted-foreground",
+											children: "Il y a 2 minutes"
+										})] })]
+									})
+								]
+							}),
+							toastOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "fixed bottom-6 left-1/2 z-50 -translate-x-1/2 surface-elevated flex items-center gap-3 px-5 py-4 shadow-elevated",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "grid h-8 w-8 place-items-center rounded-full bg-success/20",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+										className: "h-4 w-4 text-success",
+										strokeWidth: 3
+									})
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-sm font-semibold",
+									children: "Action confirmée"
+								})]
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "12",
+					title: "Loader",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-wrap items-center gap-10",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3 text-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoaderCircle, { className: "mx-auto h-10 w-10 animate-spin text-primary" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "Spinner"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "space-y-3 text-center",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative grid h-16 w-16 place-items-center",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "absolute inset-0 rounded-full border-4 border-muted" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "absolute inset-0 rounded-full border-4 border-transparent border-t-primary animate-spin" })]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "Circulaire"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex-1 min-w-[200px] space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "h-2 w-full overflow-hidden rounded-full bg-muted",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full w-3/4 gradient-primary shadow-glow" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-xs text-muted-foreground",
+									children: "Progression linéaire · 75%"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "flex gap-2",
+								children: [
+									0,
+									150,
+									300
+								].map((d) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "h-3 w-3 rounded-full gradient-primary animate-pulse",
+									style: { animationDelay: `${d}ms` }
+								}, d))
+							})
+						]
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
+					id: "13",
+					title: "Icônes · Lucide",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7",
+						children: [
+							{
+								icon: Package,
+								label: "Produit"
+							},
+							{
+								icon: Calculator,
+								label: "Calcul"
+							},
+							{
+								icon: Coins,
+								label: "Change"
+							},
+							{
+								icon: Scale,
+								label: "Poids"
+							},
+							{
+								icon: FileText,
+								label: "Devis"
+							},
+							{
+								icon: History,
+								label: "Historique"
+							},
+							{
+								icon: Settings,
+								label: "Paramètres"
+							},
+							{
+								icon: TrendingUp,
+								label: "Marge"
+							},
+							{
+								icon: House,
+								label: "Accueil"
+							},
+							{
+								icon: User,
+								label: "Profil"
+							},
+							{
+								icon: Bell,
+								label: "Alerte"
+							},
+							{
+								icon: Search,
+								label: "Recherche"
+							},
+							{
+								icon: Plus,
+								label: "Ajouter"
+							},
+							{
+								icon: X,
+								label: "Fermer"
+							}
+						].map(({ icon: Icon, label }) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col items-center gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "grid h-14 w-14 place-items-center rounded-2xl bg-card-elevated border border-border",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+									className: "h-6 w-6 text-foreground",
+									strokeWidth: 1.8
+								})
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-xs text-muted-foreground",
+								children: label
+							})]
+						}, label))
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
+					className: "pt-10 text-center",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-display text-xs font-semibold tracking-[0.2em] text-muted-foreground",
+						children: "IMPORTAPRO · DESIGN SYSTEM v1.0"
+					})
+				})
+			]
+		})]
+	});
+}
+//#endregion
+export { DesignSystem as component };
